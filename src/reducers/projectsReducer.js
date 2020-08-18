@@ -1,16 +1,16 @@
-import {PROJECT_REDUCER} from '../shared/actionContants';
+import { PROJECT_REDUCER } from "../shared/actionConstants";
 
 const initialState = {
-  projects: []
-}
+  projects: [],
+};
 
-const projectsReducer = (state = initialState, action ) => {
-  switch(action.type) {
+const projectsReducer = (state = initialState, action) => {
+  switch (action.type) {
     case PROJECT_REDUCER.SET_PROJECTS:
-      return {...state, projects: action.value}
+      return { ...state, projects: action.value };
     default:
-      return state
+      return state;
   }
-}
+};
 
 export default projectsReducer;
